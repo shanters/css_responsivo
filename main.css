@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #2b3294;
+    color: #fff;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin: 16px 0;
+    font-size: 2em;
+    border-bottom: 2px solid #2b3294;
+    color: #2b3294;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+section img {
+    height: 400px;
+    margin-right: 32px;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 1%;
+    row-gap: 5%;
+
+}
+
+.lista-produtos li {
+    list-style: none;
+    margin: 16px;
+}
+
+.lista-produtos li img {
+    height: 200px;
+    max-width: 100%;
+}
+
+.lista-produtos li p {
+    margin: 16px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #2b3294;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        display: block;
+    }
+
+    section .container {
+        display: block;
+    }
+
+    section .container img {
+        max-width: 100%;
+        height: 280px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(1, 98%);
+        row-gap: 0;
+        column-gap: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+        font-size: 1.5em;
+    }
+
+    section .container {
+        display: block;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, 49%);
+        row-gap: 0;
+        column-gap: 0;
+        
+    }
+
+
+    .lista-produtos li img {
+        height: 350px;
+        max-width: 150%;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 22px;
+    }
+
+}
